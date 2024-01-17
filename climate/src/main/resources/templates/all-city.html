@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show Data</title>
+</head>
+<body>
+<h2>Data Table</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Year</th>
+        <th>Average Temperature</th>
+        <th>Minimum Temperature</th>
+        <th>Maximum Temperature</th>
+        <!-- Add more columns as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="data : ${dataList}">
+        <td th:text="${data.year}"></td>
+        <td th:text="${data.avgTemp}"></td>
+        <td th:text="${data.minTemp}"></td>
+        <td th:text="${data.maxTemp}"></td>
+        <!-- Add more columns as needed -->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
